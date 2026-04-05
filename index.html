@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magical Beauty Studio | Estética Soft & Dreamy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --kawaii-pink: #ffdae9;
+            --strawberry-red: #ff5e7e;
+            --soft-white: #fffafa;
+            --magic-purple: #e0c3fc;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--soft-white);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .font-pacific { font-family: 'Pacifico', cursive; }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 182, 193, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(255, 182, 193, 0.2);
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .btn-kawaii {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: linear-gradient(135deg, #ffb6c1 0%, #ff5e7e 100%);
+        }
+
+        .btn-kawaii:hover {
+            transform: scale(1.05) rotate(-1deg);
+            box-shadow: 0 10px 20px rgba(255, 94, 126, 0.3);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #ff5e7e, #b19cd9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .custom-shape-divider-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .custom-shape-divider-bottom svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 80px;
+            fill: #ffffff;
+        }
+
+        .cursor-sparkle {
+            pointer-events: none;
+            position: fixed;
+            background: radial-gradient(circle, #fff 20%, #ffb6c1 40%, transparent 70%);
+            border-radius: 50%;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body class="selection:bg-pink-200">
+
+    <nav class="fixed w-full z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass-card rounded-full px-8 py-3">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl">✨</span>
+                <span class="font-pacific text-2xl text-[#ff5e7e]">Magical Beauty</span>
+            </div>
+            <div class="hidden md:flex gap-8 font-medium text-gray-600">
+                <a href="#home" class="hover:text-[#ff5e7e] transition-colors">Inicio</a>
+                <a href="#about" class="hover:text-[#ff5e7e] transition-colors">Esencia</a>
+                <a href="#services" class="hover:text-[#ff5e7e] transition-colors">Servicios</a>
+                <a href="#contact" class="hover:text-[#ff5e7e] transition-colors">Contacto</a>
+            </div>
+            <button class="btn-kawaii text-white px-6 py-2 rounded-full font-bold shadow-lg text-sm">
+                RESERVAR CITA 🌸
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 bg-[#fff5f8]">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="z-10">
+                <span class="inline-block px-4 py-1 rounded-full bg-pink-100 text-[#ff5e7e] font-bold text-sm mb-4 border border-pink-200">
+                    💖 TU LADO MÁS DULCE
+                </span>
+                <h1 class="text-6xl md:text-8xl font-bold mb-6 leading-tight">
+                    Brilla con <br>
+                    <span class="gradient-text font-pacific">Magia Propia</span>
+                </h1>
+                <p class="text-lg text-gray-500 mb-8 max-w-md">
+                    Descubre una experiencia de belleza original basada en la estética <i>Soft-Girl</i>. Maquillaje artesanal para almas soñadoras.
+                </p>
+                <div class="flex gap-4">
+                    <button class="btn-kawaii text-white px-10 py-4 rounded-2xl font-bold text-lg shadow-xl">
+                        Ver Catálogo
+                    </button>
+                    <button class="bg-white border-2 border-pink-200 text-pink-400 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-pink-50 transition-all">
+                        Galería ✨
+                    </button>
+                </div>
+            </div>
+            <div class="relative flex justify-center items-center">
+                <div class="absolute w-72 h-72 bg-pink-200 rounded-full blur-3xl opacity-50 floating"></div>
+                
+                <div class="relative z-10 glass-card p-4 rounded-[3rem] rotate-3 hover:rotate-0 transition-transform duration-500 min-h-[400px] flex items-center justify-center">
+                    
+                    <div class="absolute -bottom-6 -right-6 floating" style="animation-delay: 1s;">
+                        <span class="text-7xl">🦢</span>
+                    </div>
+                    <div class="absolute -top-6 -left-6 floating" style="animation-delay: 0.5s;">
+                        <span class="text-5xl">☁️</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="custom-shape-divider-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section id="about" class="py-32 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="space-y-4 pt-12">
+                        <div class="glass-card rounded-3xl p-2 h-64 overflow-hidden shadow-pink-100 shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover rounded-2xl">
+                        </div>
+                        <div class="bg-red-50 rounded-3xl p-8 text-center border-2 border-dashed border-red-200">
+                            <span class="text-4xl">🍒</span>
+                            <h4 class="font-bold text-red-400 mt-2">Natural Bloom</h4>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-purple-50 rounded-3xl p-8 text-center border-2 border-dashed border-purple-200">
+                            <span class="text-4xl">🦋</span>
+                            <h4 class="font-bold text-purple-400 mt-2">Dreamy Style</h4>
+                        </div>
+                        <div class="glass-card rounded-3xl p-2 h-64 overflow-hidden shadow-pink-100 shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover rounded-2xl">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-4xl font-bold mb-6 text-gray-800">Filosofía <span class="font-pacific text-[#ff5e7e]">Pure Essence</span></h2>
+                    <p class="text-gray-500 text-lg mb-6 leading-relaxed">
+                        Inspirada en la delicadeza de los cuentos de hadas y el minimalismo suave, mi objetivo es resaltar tu resplandor único. Utilizamos productos botánicos y técnicas de vanguardia para un acabado etéreo.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <span class="bg-pink-100 p-1 rounded-full text-xs">⭐</span> Estética "Gatito de Azúcar" (Dulce y Refinado)
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <span class="bg-pink-100 p-1 rounded-full text-xs">🌿</span> Cuidado de la piel Vegano
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <span class="bg-pink-100 p-1 rounded-full text-xs">🎀</span> Diseños Coquette Originales
+                        </li>
+                    </ul>
+                    <button class="border-b-2 border-[#ff5e7e] text-[#ff5e7e] font-bold pb-1 hover:tracking-widest transition-all">
+                        DESCUBRE MI HISTORIA →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-[#fff9fb]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="font-pacific text-4xl text-[#ff5e7e] mb-2">Servicios Exclusivos</h2>
+                <p class="text-gray-400">Diseñados para realzar tu magia interior</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="group relative bg-white p-8 rounded-[3rem] border border-pink-100 hover:shadow-2xl transition-all duration-500">
+                    <div class="w-20 h-20 bg-pink-100 rounded-3xl flex items-center justify-center text-4xl mb-6 group-hover:rotate-12 transition-transform">
+                        🦋
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Glass Skin Effect</h3>
+                    <p class="text-gray-500 mb-6">Piel ultra-hidratada con un acabado translúcido y celestial.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-pink-400 text-xl">$45.00</span>
+                        <button class="w-10 h-10 rounded-full bg-pink-50 flex items-center justify-center text-pink-400 font-bold">+</button>
+                    </div>
+                </div>
+                <div class="group relative bg-white p-8 rounded-[3rem] border border-pink-100 shadow-xl scale-105 z-10 transition-all duration-500">
+                    <div class="absolute -top-4 -right-4 bg-red-400 text-white px-4 py-1 rounded-full text-xs font-bold animate-pulse">RECOMENDADO</div>
+                    <div class="w-20 h-20 bg-red-100 rounded-3xl flex items-center justify-center text-4xl mb-6 group-hover:rotate-12 transition-transform">
+                        🍒
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Berry Blossom Look</h3>
+                    <p class="text-gray-500 mb-6">Inspirado en la frescura de los frutos rojos y un rubor natural.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-pink-400 text-xl">$60.00</span>
+                        <button class="w-10 h-10 rounded-full bg-[#ff5e7e] flex items-center justify-center text-white font-bold">+</button>
+                    </div>
+                </div>
+                <div class="group relative bg-white p-8 rounded-[3rem] border border-pink-100 hover:shadow-2xl transition-all duration-500">
+                    <div class="w-20 h-20 bg-purple-100 rounded-3xl flex items-center justify-center text-4xl mb-6 group-hover:rotate-12 transition-transform">
+                        🌙
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Starry Gaze</h3>
+                    <p class="text-gray-500 mb-6">Delineados creativos con pedrería y pestañas de efecto muñeca.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-pink-400 text-xl">$35.00</span>
+                        <button class="w-10 h-10 rounded-full bg-pink-50 flex items-center justify-center text-pink-400 font-bold">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-white pt-20 pb-10 border-t border-pink-50">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-12">
+                <span class="text-5xl block mb-4">🌸</span>
+                <h2 class="font-pacific text-3xl text-[#ff5e7e] mb-4">¿Lista para tu transformación?</h2>
+                <div class="flex justify-center gap-6 mt-8">
+                    <div class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-xs font-bold hover:bg-pink-100 cursor-pointer transition-colors">INSTA</div>
+                    <div class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-xs font-bold hover:bg-pink-100 cursor-pointer transition-colors">TIK</div>
+                    <div class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-xs font-bold hover:bg-pink-100 cursor-pointer transition-colors">WEB</div>
+                </div>
+            </div>
+            <hr class="border-pink-50 mb-8">
+            <p class="text-gray-400 text-sm">
+                &copy; 2026 Magical Beauty. Identidad Visual Original ✨ 
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // CURSOR SPARKLE
+        function createSparkle(x, y) {
+            const sparkle = document.createElement('div');
+            sparkle.classList.add('cursor-sparkle');
+            sparkle.style.left = x + 'px';
+            sparkle.style.top = y + 'px';
+            const size = Math.random() * 8 + 4;
+            sparkle.style.width = size + 'px';
+            sparkle.style.height = size + 'px';
+            document.body.appendChild(sparkle);
+
+            const destX = (Math.random() - 0.5) * 50;
+            const destY = (Math.random() - 0.5) * 50;
+
+            sparkle.animate([
+                { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+                { transform: `translate(${destX}px, ${destY}px) scale(0)`, opacity: 0 }
+            ], {
+                duration: 800,
+                easing: 'ease-out'
+            }).onfinish = () => sparkle.remove();
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            if (Math.random() > 0.8) {
+                createSparkle(e.clientX, e.clientY);
+            }
+        });
+
+        // PARALLAX EFECTO
+        const cards = document.querySelectorAll('.group');
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 15;
+            const y = (e.clientY / window.innerHeight - 0.5) * 15;
+            cards.forEach(card => {
+                card.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
